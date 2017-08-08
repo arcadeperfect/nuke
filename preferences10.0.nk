@@ -1,0 +1,10 @@
+Preferences {
+ inputs 0
+ name Preferences
+ selectedGPUDeviceName "Quadro K5200"
+ platformPathRemaps ""
+ maxPanels 1
+ expression_arrows false
+ clone_arrows false
+ Viewer3DControlEmulation Maya
+}
