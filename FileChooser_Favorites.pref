@@ -6,8 +6,9 @@ add_favorite_dir Nuke Nuke icon16 "[file dir $program_name]/"
 add_favorite_dir -script playstationknac2_29173P playstationknac2_29173P "" P:/projects/playstationknac2_29173P/
 add_favorite_dir -script aharding aharding "" P:/projects/playstationknac2_29173P/assets/2D/element/element/comp/work/aharding/
 add_favorite_dir -geo aharding aharding "" P:/projects/playstationknac2_29173P/assets/2D/element/element/comp/work/aharding/
-add_favorite_dir -image -script -geo "Shotgun Current Project" "Shotgun Current Project" P:\global\code\pipeline\bootstrap\tank\install\engines\app_store\tk-nuke\v0.6.11p\resources\sg_logo_80px.png P:\projects\playstationknac2_29173P P:/projects/playstationknac2_29173P/
-add_favorite_dir -image -script -geo "Shotgun Current Work" "Shotgun Current Work" P:\global\code\pipeline\bootstrap\tank\install\engines\app_store\tk-nuke\v0.6.11p\resources\sg_logo_80px.png P:\projects\playstationknac2_29173P\sequences\moves\mo0040\composite\work\nuke P:/projects/playstationknac2_29173P/sequences/moves/mo0040/composite/work/nuke/
 add_favorite_dir -image aharding aharding "" P:/projects/playstationknac2_29173P/assets/2D/element/element/comp/work/aharding/
+add_favorite_dir -image -script -geo "Shotgun Current Project" "Shotgun Current Project" P:\global\code\pipeline\bootstrap\tank\install\engines\app_store\tk-nuke\v0.6.11p\resources\sg_logo_80px.png P:\projects\playstationknac2_29173P P:/projects/playstationknac2_29173P/
+add_favorite_dir -image -script -geo "Shotgun Current Work" "Shotgun Current Work" P:\global\code\pipeline\bootstrap\tank\install\engines\app_store\tk-nuke\v0.6.11p\resources\sg_logo_80px.png P:\projects\playstationknac2_29173P\sequences\speech\sp0060\composite\work\nuke P:/projects/playstationknac2_29173P/sequences/speech/sp0060/composite/work/nuke/
+add_favorite_dir -image -script -project -python -font -geo -misc -sequence aharding aharding "" P:/projects/playstationknac2_29173P/assets/2D/element/element/comp/work/aharding/
 
 # End of generated file.
