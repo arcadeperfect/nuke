@@ -3,7 +3,7 @@
     <window x="0" y="0" w="1920" h="1160" screen="0">
         <splitter orientation="1">
             <split size="40"/>
-            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+            <dock id="" hideTitles="1" activePageId="Toolbar.1" focus="true">
                 <page id="Toolbar.1"/>
             </dock>
             <split size="1860" stretch="1"/>
@@ -11,7 +11,7 @@
                 <split size="945"/>
                 <splitter orientation="1">
                     <split size="1860"/>
-                    <dock id="" activePageId="Viewer.1" focus="true">
+                    <dock id="" activePageId="Viewer.1">
                         <page id="Viewer.1"/>
                     </dock>
                 </splitter>
@@ -25,12 +25,12 @@
     </window>
     <window x="1920" y="0" w="1926" h="1160" screen="1">
         <splitter orientation="1">
-            <split size="982"/>
+            <split size="551"/>
             <dock id="" activePageId="uk.co.thefoundry.scripteditor.1">
                 <page id="Properties.1"/>
                 <page id="uk.co.thefoundry.scripteditor.1"/>
             </dock>
-            <split size="924"/>
+            <split size="1355"/>
             <dock id="" activePageId="DAG.1">
                 <page id="DAG.1"/>
             </dock>

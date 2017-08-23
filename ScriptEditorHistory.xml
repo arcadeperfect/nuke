@@ -1,13 +1,2 @@
-<?xml version="1.0" encoding="UTF-8"?><script>for i in nuke.allNodes(&quot;Submitter&quot;):
-    i['priority'].setValue(2)
-
-for i in nuke.allNodes(&quot;Submitter&quot;):
-    i['execute_farm'].execute()
-
-
-for i in nuke.selectedNodes():
-    i['hide_input'].setValue(1)
-
-
-for i in nuke.selectedNodes():
-    i['matchAOVs'].execute()</script>
+<?xml version="1.0" encoding="UTF-8"?><script>for i in nuke.selectedNodes():
+    find_latest(i)</script>

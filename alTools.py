@@ -69,3 +69,37 @@ def run_scale_nodes():
         scale_nodes(float(x),float(y))
 		
 nuke.menu('Nuke').addCommand('harding/Scale Nodes', run_scale_nodes, )
+
+
+#	Merge shortcuts
+#
+#
+
+def hardingMask():
+    m = nuke.createNode('Merge2')
+    m['operation'].setValue('mask')	
+
+def hardingStencil():
+    m = nuke.createNode('Merge2')
+    m['operation'].setValue('stencil')
+
+def hardingFrom():
+    m = nuke.createNode('Merge2')
+    m['operation'].setValue('from')
+
+def hardingPlus():
+    m = nuke.createNode('Merge2')
+    m['operation'].setValue('plus')
+
+def hardingScreen():
+    m = nuke.createNode('Merge2')
+    m['operation'].setValue('screen')
+	
+nuke.menu('Nuke').addCommand('harding/Mask', hardingMask, 'ctrl+shift+m' )
+nuke.menu('Nuke').addCommand('harding/Stencil', hardingStencil, 'ctrl+shift+s' )
+nuke.menu('Nuke').addCommand('harding/From', hardingFrom, 'ctrl+shift+f' )
+nuke.menu('Nuke').addCommand('harding/Plus', hardingPlus, 'ctrl+shift+p' )
+nuke.menu('Nuke').addCommand('harding/Screen', hardingScreen, )
+
+
+

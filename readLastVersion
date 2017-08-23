@@ -1,0 +1,13 @@
+import os
+
+node = nuke.selectedNode()
+
+
+
+file = node['file'].getValue()
+path = '/'.join(file.split('/')[0:10])
+versions = os.listdir(path)
+versions.sort()
+path += '/%s' % versions[-1]
+
+

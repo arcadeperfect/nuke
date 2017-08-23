@@ -7,4 +7,5 @@ Preferences {
  expression_arrows false
  clone_arrows false
  Viewer3DControlEmulation Maya
+ echoAllCommands true
 }
