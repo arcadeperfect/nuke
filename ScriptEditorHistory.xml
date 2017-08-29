@@ -1,2 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><script>for i in nuke.selectedNodes():
-    find_latest(i)</script>
+<?xml version="1.0" encoding="UTF-8"?><script>recload()</script>

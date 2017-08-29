@@ -1,0 +1,40 @@
+<root presetname="Psyop Shotgun Exporter" tasktype="psy_hiero_ingest.sg_entity_processor.ShotgunEntityProcessor">
+    <disable_renumbering valuetype="bool">False</disable_renumbering>
+    <create_version valuetype="bool">True</create_version>
+    <update_timing valuetype="bool">True</update_timing>
+    <startFrameIndex valuetype="int">1001</startFrameIndex>
+    <exportRoot valuetype="str">{projectroot}</exportRoot>
+    <versionIndex valuetype="int">1</versionIndex>
+    <split_version valuetype="bool">True</split_version>
+    <reset_shotanchor valuetype="bool">False</reset_shotanchor>
+    <versionPadding valuetype="int">2</versionPadding>
+    <cutUseHandles valuetype="bool">False</cutUseHandles>
+    <exportTemplate valuetype="tuple">
+        <SequenceItem valuetype="tuple">
+            <SequenceItem valuetype="str">Copy Images</SequenceItem>
+            <SequenceItem valuetype="psy_hiero_ingest.sg_copy_exporter.ShotgunCopyPreset">
+                <root presetname="ShotgunCopyPreset" tasktype="psy_hiero_ingest.sg_copy_exporter.ShotgunCopyExporter" />
+            </SequenceItem>
+        </SequenceItem>
+        <SequenceItem valuetype="tuple">
+            <SequenceItem valuetype="str">Transgen Exporter</SequenceItem>
+            <SequenceItem valuetype="psy_hiero_ingest.sg_transgen.ShotgunTransgenPreset">
+                <root presetname="ShotgunTransgenPreset" tasktype="psy_hiero_ingest.sg_transgen.ShotgunTransgenExporter">
+                    <settings valuetype="dict">
+                        <export_configuration valuetype="list" />
+                    </settings>
+                </root>
+            </SequenceItem>
+        </SequenceItem>
+    </exportTemplate>
+    <excludeTags valuetype="list" />
+    <submission_preset valuetype="unicode">SG Thumbnail</submission_preset>
+    <includeTags valuetype="list" />
+    <create_movie valuetype="bool">False</create_movie>
+    <add_to_cut valuetype="bool">False</add_to_cut>
+    <auto_version_up valuetype="bool">True</auto_version_up>
+    <includeRetimes valuetype="bool">False</includeRetimes>
+    <startFrameSource valuetype="str">Source</startFrameSource>
+    <cutLength valuetype="bool">False</cutLength>
+    <cutHandles valuetype="int">12</cutHandles>
+</root>

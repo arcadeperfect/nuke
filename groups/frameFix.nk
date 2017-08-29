@@ -1,8 +1,13 @@
-#! /software/nuke/7.0v8/linux.centos5.x86_64/Nuke7.0 -nx
-version 7.0 v8
-Gizmo {
+set cut_paste_input [stack 0]
+version 10.0 v6
+push $cut_paste_input
+Group {
+ name Group1
  label "\[value frameFix]"
  note_font "Bitstream Vera Sans"
+ selected true
+ xpos -422
+ ypos -423
  mapsize {0.15 0.15}
  addUserKnob {20 User l "Frame fix"}
  addUserKnob {41 frameFix l frame T control.frameFix}
@@ -14,15 +19,15 @@ Gizmo {
  addUserKnob {41 useGPUIfAvailable l "Use GPU if available" T Kronos1.useGPUIfAvailable}
  addUserKnob {26 ""}
  addUserKnob {41 interactKnob T Kronos1.interactKnob}
- addUserKnob {41 serializeKnob T Kronos1.serializeKnob}
+ addUserKnob {41 serializeKnob +INVISIBLE T Kronos1.serializeKnob}
  addUserKnob {41 input.first l "Input Range" T Kronos1.input.first}
  addUserKnob {41 input.last l "" -STARTLINE T Kronos1.input.last}
  addUserKnob {41 resetInputRange l Reset T Kronos1.resetInputRange}
- addUserKnob {41 timing l Timing T Kronos1.timing}
- addUserKnob {41 timingSpeed l Speed T Kronos1.timingSpeed}
- addUserKnob {41 timingFrame l Frame T Kronos1.timingFrame}
- addUserKnob {41 vectorDetail l "Vector Detail" T Kronos1.vectorDetail}
- addUserKnob {41 smoothness l Smoothness T Kronos1.smoothness}
+ addUserKnob {41 timing l Timing +INVISIBLE T Kronos1.timing}
+ addUserKnob {41 timingSpeed l Speed +INVISIBLE T Kronos1.timingSpeed}
+ addUserKnob {41 timingFrame l Frame +INVISIBLE T Kronos1.timingFrame}
+ addUserKnob {41 vectorDetail l "Vector Detail" +INVISIBLE T Kronos1.vectorDetail}
+ addUserKnob {41 smoothness l Smoothness +INVISIBLE T Kronos1.smoothness}
  addUserKnob {20 Shutter n 2}
  addUserKnob {41 shutterSamples l "Shutter Samples" T Kronos1.shutterSamples}
  addUserKnob {41 shutterTime l "Shutter Time" T Kronos1.shutterTime}
@@ -54,10 +59,11 @@ Gizmo {
   xpos -446
   ypos 26
  }
-set N3f9edfe0 [stack 0]
-push $N3f9edfe0
+set N73da5000 [stack 0]
+push $N73da5000
  TimeWarp {
   lookup {{(frame*(mult)+(offset-mult))-1 i C x1 90 93}}
+  time ""
   name TimeWarp2
   xpos -537
   ypos 105
@@ -67,22 +73,22 @@ push $N3f9edfe0
   addUserKnob {7 offset}
   offset {{parent.control.frameFix i}}
  }
-set N11b33300 [stack 0]
+set N73da4c00 [stack 0]
  Kronos {
-  useGPUIfAvailable false
-  serializeKnob ""
-  timing Frame
-  timingFrame {{frame/parent.control.amount+(1-1/control.amount)}}
-  vectorSourceFlag 2
-  warpSourceFlag 2
-  computedVectorFlag 2
-  maskFlag 2
-  name Kronos1
+  retimedChannels all
+  timing2 Frame
+  timingFrame2 {{frame/parent.control.amount+(1-1/control.amount)}}
+  showLegacyMode false
+  motionEstimation Regularized
+  legacyModeNuke9 false
+  name Kronos2
+  selected true
   xpos -537
-  ypos 151
+  ypos 147
  }
  TimeOffset {
   time_offset {{control.frameFix-2 i}}
+  time ""
   name TimeOffset1
   xpos -537
   ypos 200
@@ -99,7 +105,7 @@ set N11b33300 [stack 0]
   xpos -487
   ypos 344
  }
-push $N3f9edfe0
+push $N73da5000
  NoOp {
   name control
   xpos -735
@@ -112,7 +118,7 @@ push $N3f9edfe0
   addUserKnob {3 amount}
   amount {{inputAmount+1}}
  }
-push $N11b33300
+push $N73da4c00
  OFXuk.co.thefoundry.time.oflow_v100 {
   method Motion
   timing "Source Frame"
