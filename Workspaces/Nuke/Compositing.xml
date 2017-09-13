@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="0" y="0" w="1920" h="1160" screen="0">
+    <window x="-8" y="-8" w="1936" h="1176" maximized="1" screen="1">
         <splitter orientation="1">
             <split size="40"/>
-            <dock id="" hideTitles="1" activePageId="Toolbar.1" focus="true">
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="1860" stretch="1"/>
+            <split size="1876" stretch="1"/>
             <splitter orientation="2">
-                <split size="945"/>
+                <split size="959"/>
                 <splitter orientation="1">
-                    <split size="1860"/>
-                    <dock id="" activePageId="Viewer.1">
+                    <split size="1876"/>
+                    <dock id="" activePageId="Viewer.1" focus="true">
                         <page id="Viewer.1"/>
                     </dock>
                 </splitter>
-                <split size="149"/>
+                <split size="151"/>
                 <dock id="" activePageId="Curve Editor.1">
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
@@ -23,14 +23,14 @@
             </splitter>
         </splitter>
     </window>
-    <window x="1920" y="0" w="1926" h="1160" screen="1">
+    <window x="1920" y="0" w="1936" h="1212" maximized="1" screen="0">
         <splitter orientation="1">
-            <split size="551"/>
+            <split size="554"/>
             <dock id="" activePageId="uk.co.thefoundry.scripteditor.1">
                 <page id="Properties.1"/>
                 <page id="uk.co.thefoundry.scripteditor.1"/>
             </dock>
-            <split size="1355"/>
+            <split size="1362"/>
             <dock id="" activePageId="DAG.1">
                 <page id="DAG.1"/>
             </dock>
