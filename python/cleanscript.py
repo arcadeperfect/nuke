@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><script>### DELETE NODES WITH NO DEPENDENCIES
+### DELETE NODES WITH NO DEPENDENCIES
 
 exclude = ['BackdropNode','Viewer']
 
@@ -21,4 +21,4 @@ for n in nuke.selectedNodes():
                     if n['disable'].getValue() == 1:
                         nuke.delete(n)
             else:
-                print 'errrrrr'</script>
+                print 'errrrrr'

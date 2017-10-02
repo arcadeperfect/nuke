@@ -1,21 +1,23 @@
 Preferences {
- inputs 0
- name Preferences
- localCachePath W:/localize/
- autoLocalCachePath P:/
- LocalizationSizeLimit 250
- LocalizationPauseOnProjectLoad true
- CacheLimit 80
- PlaybackLimit 80
- DiskCachePath W:/cache/
- diskCacheGB 50
- PaintCacheGB 50
- PaintCacheLimit 80
- selectedGPUDeviceName "Quadro M4000"
- platformPathRemaps ""
- maxPanels 1
- expression_arrows false
- clone_arrows false
- Viewer3DControlEmulation Maya
- echoAllCommands true
+inputs 0
+name Preferences
+localCachePath W:/localize/
+autoLocalCachePath P:/
+LocalizationSizeLimit 250
+LocalizationPauseOnProjectLoad true
+CacheLimit 80
+PlaybackLimit 80
+DiskCachePath W:/cache/
+diskCacheGB 50
+PaintCacheGB 50
+PaintCacheLimit 80
+selectedGPUDeviceName "Quadro M4000"
+platformPathRemaps ""
+maxPanels 1
+expression_arrows false
+clone_arrows false
+rgb_only true
+TextureSize 2048x2048
+Viewer3DControlEmulation Maya
+echoAllCommands true
 }
